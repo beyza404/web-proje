@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özgeçmiş - Düzcemi Tanıyorum</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Düzcemi Tanıyorum</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Giriş Yap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik - Özgeçmiş -->
+    <main class="container my-5">
+        <article class="cv-container bg-light p-4 rounded shadow">
+            <header class="text-center mb-5">
+                <h1>Özgeçmiş</h1>
+                <p class="lead">[Adınız Soyadınız]</p>
+            </header>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-user me-2"></i> Kişisel Bilgiler</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <address>
+                            <strong>Adres:</strong> [Adresiniz]<br>
+                            <strong>Telefon:</strong> [Telefon Numaranız]<br>
+                            <strong>E-posta:</strong> [E-posta Adresiniz]<br>
+                            <strong>Doğum Tarihi:</strong> [Doğum Tarihiniz]<br>
+                            <strong>Doğum Yeri:</strong> [Doğum Yeriniz]
+                        </address>
+                    </div>
+                    <div class="col-md-6">
+                        <figure class="text-center">
+                            <img src="img/profile.jpg" alt="Profil Resmi" class="img-fluid rounded-circle border border-primary p-2" style="max-width: 150px;">
+                            <figcaption class="mt-2">[Adınız Soyadınız]</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-graduation-cap me-2"></i> Eğitim Bilgileri</h2>
+                <hr>
+                <details open>
+                    <summary class="h4 mb-3">Üniversite</summary>
+                    <div class="ps-4 mb-4">
+                        <time datetime="2020-09">2020 - Devam Ediyor</time>
+                        <h3 class="h5">[Üniversiteniz]</h3>
+                        <p>[Bölümünüz]</p>
+                        <p>Not Ortalaması: [GPA]</p>
+                    </div>
+                </details>
+
+                <details open>
+                    <summary class="h4 mb-3">Lise</summary>
+                    <div class="ps-4 mb-4">
+                        <time datetime="2016-09">2016 - 2020</time>
+                        <h3 class="h5">[Lisenizin Adı]</h3>
+                        <p>[Bölüm/Alan]</p>
+                        <p>Not Ortalaması: [Diploma Notu]</p>
+                    </div>
+                </details>
+            </section>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-briefcase me-2"></i> İş Deneyimi</h2>
+                <hr>
+                <!-- İş deneyiminiz varsa ekleyebilirsiniz -->
+                <article class="ps-4 mb-4">
+                    <header>
+                        <time datetime="2023-06">Haziran 2023 - Ağustos 2023</time>
+                        <h3 class="h5">[Pozisyon]</h3>
+                        <p>[Şirket Adı], [Şehir]</p>
+                    </header>
+                    <ul>
+                        <li>Sorumluluk 1</li>
+                        <li>Sorumluluk 2</li>
+                        <li>Sorumluluk 3</li>
+                    </ul>
+                </article>
+                
+                <!-- Staj deneyiminiz varsa ekleyebilirsiniz -->
+                <article class="ps-4 mb-4">
+                    <header>
+                        <time datetime="2022-07">Temmuz 2022 - Ağustos 2022</time>
+                        <h3 class="h5">Stajyer</h3>
+                        <p>[Şirket Adı], [Şehir]</p>
+                    </header>
+                    <ul>
+                        <li>Görev 1</li>
+                        <li>Görev 2</li>
+                        <li>Görev 3</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-laptop-code me-2"></i> Beceriler</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="h4">Programlama Dilleri</h3>
+                        <ul>
+                            <li>HTML/CSS - <meter value="0.9" min="0" max="1">90%</meter></li>
+                            <li>JavaScript - <meter value="0.8" min="0" max="1">80%</meter></li>
+                            <li>PHP - <meter value="0.7" min="0" max="1">70%</meter></li>
+                            <li>Python - <meter value="0.6" min="0" max="1">60%</meter></li>
+                            <li>Java - <meter value="0.5" min="0" max="1">50%</meter></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h4">Yabancı Diller</h3>
+                        <ul>
+                            <li>İngilizce - <meter value="0.8" min="0" max="1">80%</meter></li>
+                            <li>Almanca - <meter value="0.4" min="0" max="1">40%</meter></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-certificate me-2"></i> Sertifikalar</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <h3 class="h5">[Sertifika Adı]</h3>
+                        <p>[Kurum Adı] - <time datetime="2023-02">Şubat 2023</time></p>
+                    </li>
+                    <li>
+                        <h3 class="h5">[Sertifika Adı]</h3>
+                        <p>[Kurum Adı] - <time datetime="2022-05">Mayıs 2022</time></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h2><i class="fas fa-project-diagram me-2"></i> Projeler</h2>
+                <hr>
+                <article class="mb-3">
+                    <h3 class="h5">[Proje Adı]</h3>
+                    <p><time datetime="2023-03">Mart 2023</time></p>
+                    <p>[Proje açıklaması]</p>
+                    <p><mark>Kullanılan Teknolojiler:</mark> HTML, CSS, JavaScript, Bootstrap</p>
+                </article>
+                
+                <article class="mb-3">
+                    <h3 class="h5">[Proje Adı]</h3>
+                    <p><time datetime="2022-11">Kasım 2022</time></p>
+                    <p>[Proje açıklaması]</p>
+                    <p><mark>Kullanılan Teknolojiler:</mark> Python, MySQL, Django</p>
+                </article>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-users me-2"></i> Sosyal Aktiviteler ve Üyelikler</h2>
+                <hr>
+                <ul>
+                    <li>
+                        <h3 class="h5">[Kulüp/Dernek Adı]</h3>
+                        <p>[Pozisyon] - <time datetime="2021-09">Eylül 2021 - Devam Ediyor</time></p>
+                    </li>
+                    <li>
+                        <h3 class="h5">[Kulüp/Dernek Adı]</h3>
+                        <p>[Pozisyon] - <time datetime="2020-10">Ekim 2020 - Haziran 2021</time></p>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Düzcemi Tanıyorum</h3>
+                    <p>Web Teknolojileri Dersi Projesi - 2024-2025 Bahar Dönemi</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>İletişim</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> [e-posta adresiniz]</li>
+                        <li><i class="fas fa-phone me-2"></i> [telefon numaranız]</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Düzce, Türkiye</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 [Adınız Soyadınız] - Tüm Hakları Saklıdır</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Özel JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
