@@ -1,0 +1,84 @@
+/* Genel Stiller */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Bej Arkaplan */
+    color: #4a3b31; /* Koyu Kahve Yazı Rengi */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #8B4513; /* Orta Kahve Başlık Rengi */
+}
+
+/* Navbar Stilleri */
+.navbar-custom {
+    background-color: #D2B48C; /* Açık Kahve Navbar Arkaplanı */
+    border-bottom: 2px solid #8B4513; /* Orta Kahve Alt Çizgi */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #4a3b31; /* Koyu Kahve Link Rengi */
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #ffffff; /* Beyaz - Hover ve Aktif Link Rengi */
+    background-color: #a0522d; /* Koyu Sienna - Hover Arkaplanı */
+    border-radius: 5px;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #8B4513; /* Orta Kahve Toggler Kenarlık */
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(74, 59, 49, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* Kart Stilleri */
+.card {
+    background-color: #FFF8DC; /* Mısır Püskülü - Kart Arkaplanı (Bej tonu) */
+    border: 1px solid #D2B48C; /* Açık Kahve Kart Kenarlığı */
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: #8B4513; /* Orta Kahve */
+}
+
+.card-body {
+    color: #5a4b41; /* Biraz daha açık kahve yazı */
+}
+
+/* Buton Stilleri */
+.btn-primary-custom {
+    background-color: #8B4513; /* Orta Kahve Buton */
+    border-color: #8B4513;
+    color: #ffffff; /* Beyaz Yazı */
+}
+
+.btn-primary-custom:hover {
+    background-color: #A0522D; /* Koyu Sienna - Buton Hover */
+    border-color: #A0522D;
+    color: #ffffff;
+}
+
+/* Footer Stilleri */
+footer {
+    background-color: #D2B48C; /* Açık Kahve Footer Arkaplanı */
+    color: #4a3b31; /* Koyu Kahve Yazı */
+    padding: 15px 0;
+    border-top: 2px solid #8B4513; /* Orta Kahve Üst Çizgi */
+}
+
+/* Responsive İyileştirmeler */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+}
