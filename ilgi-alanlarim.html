@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevdiğim Filmler - Kişisel Web Sitesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ilgi-alanlarim-style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Adınız Soyadınız</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hakkında</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-5 text-center">
+        <h1>Sevdiğim Filmler</h1>
+        <p class="lead">İzlediğim ve beğendiğim bazı filmler (OMDb API Kullanılarak)</p>
+    </header>
+
+    <main class="container mt-4">
+        <section id="film-listesi-alani">
+            <div id="movies-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <p id="loading-message">Filmler yükleniyor...</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <section id="diger-ilgi-alanlari">
+            <h2>Diğer İlgi Alanlarım</h2>
+            <p>
+                Filmlerin yanı sıra, diğer ilgi alanlarımdan bazıları:
+            </p>
+            <ul>
+                <li><strong>Müzik:</strong> Genellikle [Müzik Türü] dinlerim. Favori sanatçılarım: [Sanatçı 1], [Sanatçı 2].</li>
+                <li><strong>Kitaplar:</strong> [Yazar Adı]'nın eserlerini okumayı severim. Şu anda [Kitap Adı] okuyorum.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="text-center mt-5 mb-3">
+        <p>&copy; 2024 [Adınız Soyadınız] | Web Teknolojileri Projesi</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const moviesContainer = document.getElementById('movies-container');
+            const loadingMessage = document.getElementById('loading-message');
+
+            // BURAYA KENDİ OMDb API ANAHTARINI GİR (Örn: 'ab12345c')
+            const apiKey = 'a4f862ad';
+
+            // GÖSTERMEK İSTEDİĞİN FİLMLERİN IMDb ID'LERİ VEYA ADLARI
+            // IMDb ID kullanmak daha kesin sonuç verir.
+            const favoriteMovies = [
+                'tt4972582', // split
+                'tt0068646', // The Godfather
+                'tt0110912', // Pulp Fiction
+                'tt1375666', // Inception
+                
+                // Buraya kendi sevdiğin filmlerin IMDb ID'lerini ekleyebilirsin
+                // VEYA film adlarını kullanabilirsin: 'The Dark Knight', 'Forrest Gump'
+            ];
+
+            async function fetchMovieData(identifier) {
+                let url = '';
+                // IMDb ID mi yoksa film adı mı olduğunu kontrol et
+                if (identifier.startsWith('tt')) {
+                    url = `https://www.omdbapi.com/?i=${identifier}&apikey=${apiKey}&plot=short`;
+                } else {
+                    url = `https://www.omdbapi.com/?t=${encodeURIComponent(identifier)}&apikey=${apiKey}&plot=short`;
+                }
+
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    if (data.Response === "True") {
+                        return data;
+                    } else {
+                        console.error(`Film bulunamadı (${identifier}): ${data.Error}`);
+                        return null;
+                    }
+                } catch (error) {
+                    console.error(`API isteği sırasında hata (${identifier}):`, error);
+                    return null;
+                }
+            }
+
+            async function displayMovies() {
+                if (favoriteMovies.length === 0) {
+                    loadingMessage.textContent = 'Gösterilecek film bulunmamaktadır. Lütfen film listesini kontrol edin.';
+                    return;
+                }
+                
+                // Yükleniyor mesajını temizle veya moviesContainer'ı boşalt
+                if(loadingMessage) loadingMessage.remove(); // Mesajı kaldır
+                moviesContainer.innerHTML = ''; // Önceki içerikleri temizle (eğer varsa)
+
+
+                for (const movieIdentifier of favoriteMovies) {
+                    const movieData = await fetchMovieData(movieIdentifier);
+                    if (movieData) {
+                        const movieCard = `
+                            <div class="col">
+                                <div class="card h-100 movie-card">
+                                    <img src="${movieData.Poster !== 'N/A' ? movieData.Poster : 'https://via.placeholder.com/300x450.png?text=Poster+Bulunamadı'}" class="card-img-top" alt="${movieData.Title} Poster">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${movieData.Title}</h5>
+                                        <p class="card-text"><small class="text-muted">Yıl: ${movieData.Year}</small></p>
+                                        <p class="card-text"><strong>IMDb Puanı:</strong> ${movieData.imdbRating || 'N/A'}</p>
+                                        <p class="card-text">${movieData.Plot !== 'N/A' ? movieData.Plot : 'Açıklama bulunamadı.'}</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="https://www.imdb.com/title/${movieData.imdbID}" target="_blank" class="btn btn-primary-custom btn-sm">IMDb'de Gör</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        moviesContainer.innerHTML += movieCard;
+                    } else {
+                         // Film bulunamadı veya hata oluştu mesajını da buraya ekleyebiliriz
+                        const errorCard = `
+                            <div class="col">
+                                <div class="card h-100 movie-card-error">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Film Yüklenemedi</h5>
+                                        <p class="card-text">"${movieIdentifier}" için veri alınamadı.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        moviesContainer.innerHTML += errorCard;
+                    }
+                }
+                if (moviesContainer.innerHTML === '') {
+                     moviesContainer.innerHTML = '<div class="col"><p>Film verileri yüklenemedi. API anahtarınızı ve film listenizi kontrol edin.</p></div>';
+                }
+            }
+
+            displayMovies();
+        });
+    </script>
+</body>
+</html>
