@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kişisel Web Sitesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Adınız Soyadınız</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hakkında</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="login-form-container p-4 rounded shadow">
+                    <h2 class="text-center mb-4">Giriş Yap</h2>
+                    <form id="loginForm" action="login_handler.php" method="POST" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Kullanıcı Adı (E-posta):</label>
+                            <input type="email" class="form-control" id="username" name="username" required placeholder="bxxxxxxxxx@sakarya.edu.tr">
+                            <div class="invalid-feedback" id="usernameError">
+                                Lütfen geçerli bir e-posta adresi girin (örneğin, numaraniz@sakarya.edu.tr).
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Şifre:</label>
+                            <input type="password" class="form-control" id="password" name="password" required placeholder="bxxxxxxxxx">
+                            <div class="invalid-feedback" id="passwordError">
+                                Şifre alanı boş bırakılamaz.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Giriş</button>
+                    </form>
+                    <div id="formError" class="mt-3 text-danger"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center mt-5 mb-3">
+        <p>&copy; 2024 [Adınız Soyadınız] | Web Teknolojileri Projesi</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+            const formError = document.getElementById('formError');
+
+            formError.textContent = ''; // Clear previous general errors
+            usernameInput.classList.remove('is-invalid');
+            passwordInput.classList.remove('is-invalid');
+
+            // Kullanıcı adı boş mu kontrolü [cite: 13]
+            if (usernameInput.value.trim() === '') {
+                usernameError.textContent = 'Kullanıcı adı boş bırakılamaz.';
+                usernameInput.classList.add('is-invalid');
+                isValid = false;
+            } else {
+                // Kullanıcı adı e-posta formatında mı kontrolü [cite: 13]
+                // Basit bir e-posta format kontrolü
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                // Sakarya e-posta formatına daha özel bir kontrol:
+                const sakaryaEmailPattern = /^[a-zA-Z0-9]+@sakarya\.edu\.tr$/;
+                if (!sakaryaEmailPattern.test(usernameInput.value.trim())) {
+                    usernameError.textContent = 'Kullanıcı adı ogrencino@sakarya.edu.tr formatında olmalıdır.';
+                    usernameInput.classList.add('is-invalid');
+                    isValid = false;
+                }
+            }
+
+            // Şifre boş mu kontrolü [cite: 13]
+            if (passwordInput.value.trim() === '') {
+                passwordError.textContent = 'Şifre alanı boş bırakılamaz.';
+                passwordInput.classList.add('is-invalid');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Formun gönderilmesini engelle
+                formError.textContent = 'Lütfen formdaki hataları düzeltin.';
+            }
+        });
+    </script>
+</body>
+</html>
