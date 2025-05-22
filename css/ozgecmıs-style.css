@@ -1,0 +1,41 @@
+/* style.css dosyanızın sonuna ekleyebilirsiniz */
+
+.cv-section header h2 {
+    border-bottom: 2px solid #D2B48C; /* Açık Kahve Alt Çizgi */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #8B4513; /* Orta Kahve Başlık Rengi - zaten genel h2'de var ama emin olmak için */
+}
+
+.education-item, .experience-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #D2B48C; /* Açık Kahve Sol Kenarlık */
+}
+
+.education-item h3, .experience-item h3 {
+    font-size: 1.4rem;
+    color: #A0522D; /* Koyu Sienna - Alt Başlıklar için */
+}
+
+.education-item p, .experience-item p, .experience-item ul {
+    margin-bottom: 5px;
+}
+
+details {
+    margin-top: 10px;
+}
+
+summary {
+    cursor: pointer;
+    color: #8B4513; /* Orta Kahve */
+    font-weight: bold;
+}
+
+summary:hover {
+    color: #A0522D; /* Koyu Sienna */
+}
+
+aside h4{
+    color: #8B4513; /* Orta Kahve */
+}
