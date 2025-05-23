@@ -1,0 +1,85 @@
+#film-listesi-alani h2 { 
+    color: #8B4513;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.movie-card {
+    background-color: #FFF8DC; 
+    border: 1px solid #D2B48C; 
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.movie-card .card-img-top {
+    width: 100%;
+    max-height: 450px; 
+    object-fit: cover; 
+   /
+}
+
+.movie-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card .card-title {
+    color: #8B4513; 
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.movie-card .card-text {
+    font-size: 0.9rem;
+    color: #4a3b31; 
+    margin-bottom: 0.5rem;
+}
+
+.movie-card .card-text strong {
+    color: #A0522D; 
+}
+
+.movie-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid #eee; 
+    text-align: center;
+}
+
+
+.movie-card-error {
+    background-color: #ffebee; 
+    border: 1px solid #e57373; 
+    color: #c62828; 
+}
+.movie-card-error .card-title {
+    color: #c62828;
+}
+
+
+
+#diger-ilgi-alanlari h2 {
+    color: #8B4513;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#diger-ilgi-alanlari ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#diger-ilgi-alanlari ul li {
+    margin-bottom: 8px;
+}
+
+#loading-message {
+    font-size: 1.2rem;
+    color: #5a4b41;
+    text-align: center;
+    width: 100%;
+}
