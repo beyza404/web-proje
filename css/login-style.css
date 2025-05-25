@@ -1,25 +1,23 @@
 body {
-      background-color: #fdfaf6;  /* Ana style.css'den miras alır, gerekirse burada özelleştirin */
+      background-color: #fdfaf6;  
 }
 
 .login-form-container {
-    background-color: #FFF8DC; /* Mısır Püskülü - Bej tonu */
-    border: 1px solid #D2B48C; /* Açık Kahve Kenarlık */
-    /* Daha belirgin bir gölge ekleyebiliriz */
+    background-color: #FFF8DC; 
+    border: 1px solid #D2B48C; 
+   
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .login-form-container h2 {
-    color: #8B4513; /* Orta Kahve */
+    color: #8B4513; 
 }
 
 .form-label {
-    color: #4a3b31; /* Koyu Kahve Yazı Rengi */
+    color: #4a3b31; 
 }
 
-/* Bootstrap'in .is-invalid stilini kullanıyoruz,
-   ancak invalid-feedback için özel bir renk gerekirse: */
 .invalid-feedback {
-    color: #dc3545; /* Bootstrap'in varsayılan danger rengi */
+    color: #dc3545; 
     font-size: 0.875em;
 }
