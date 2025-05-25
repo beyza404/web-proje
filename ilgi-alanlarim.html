@@ -11,14 +11,14 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Adınız Soyadınız</a>
+            <a class="navbar-brand" href="index.html">Beyza Üstünel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Hakkında</a>
+                        <a class="nav-link" href="index.html">Hakkımda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
@@ -45,7 +45,7 @@
 
     <header class="container mt-5 text-center">
         <h1>Sevdiğim Filmler</h1>
-        <p class="lead">İzlediğim ve beğendiğim bazı filmler (OMDb API Kullanılarak)</p>
+        <p class="lead">İzlediğim ve beğendiğim bazı filmler</p>
     </header>
 
     <main class="container mt-4">
@@ -57,22 +57,10 @@
             </div>
         </section>
 
-        <hr class="my-5">
-
-        <section id="diger-ilgi-alanlari">
-            <h2>Diğer İlgi Alanlarım</h2>
-            <p>
-                Filmlerin yanı sıra, diğer ilgi alanlarımdan bazıları:
-            </p>
-            <ul>
-                <li><strong>Müzik:</strong> Genellikle [Müzik Türü] dinlerim. Favori sanatçılarım: [Sanatçı 1], [Sanatçı 2].</li>
-                <li><strong>Kitaplar:</strong> [Yazar Adı]'nın eserlerini okumayı severim. Şu anda [Kitap Adı] okuyorum.</li>
-            </ul>
-        </section>
-    </main>
+       
 
     <footer class="text-center mt-5 mb-3">
-        <p>&copy; 2024 [Adınız Soyadınız] | Web Teknolojileri Projesi</p>
+        <p>&copy; 2025 Beyza Üstünel | Web Teknolojileri Projesi</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -81,24 +69,36 @@
             const moviesContainer = document.getElementById('movies-container');
             const loadingMessage = document.getElementById('loading-message');
 
-            // BURAYA KENDİ OMDb API ANAHTARINI GİR (Örn: 'ab12345c')
+        
             const apiKey = 'a4f862ad';
 
-            // GÖSTERMEK İSTEDİĞİN FİLMLERİN IMDb ID'LERİ VEYA ADLARI
-            // IMDb ID kullanmak daha kesin sonuç verir.
+            
             const favoriteMovies = [
-                'tt4972582', // split
-                'tt0068646', // The Godfather
-                'tt0110912', // Pulp Fiction
-                'tt1375666', // Inception
+                'tt4972582', 
+                'tt2278388', 
+                'tt0102926', 
+                'tt0783233',
+                'tt0120737', 
+                'tt0206634',
+                'tt3262342',
+                'tt0118971',
+                'tt1023114',
+                'tt1457767',
+                'tt0066921',
+                'tt1130884',
+                'tt0361748',
+                'tt0172495',
+                'tt0320661',
+                'tt0081505',
+                'tt0107290',
+                'tt0086250',
                 
-                // Buraya kendi sevdiğin filmlerin IMDb ID'lerini ekleyebilirsin
-                // VEYA film adlarını kullanabilirsin: 'The Dark Knight', 'Forrest Gump'
+        
             ];
 
             async function fetchMovieData(identifier) {
                 let url = '';
-                // IMDb ID mi yoksa film adı mı olduğunu kontrol et
+                // IMDb ID mi yoksa film adı mı olduğu kontrol
                 if (identifier.startsWith('tt')) {
                     url = `https://www.omdbapi.com/?i=${identifier}&apikey=${apiKey}&plot=short`;
                 } else {
@@ -126,9 +126,9 @@
                     return;
                 }
                 
-                // Yükleniyor mesajını temizle veya moviesContainer'ı boşalt
-                if(loadingMessage) loadingMessage.remove(); // Mesajı kaldır
-                moviesContainer.innerHTML = ''; // Önceki içerikleri temizle (eğer varsa)
+                
+                if(loadingMessage) loadingMessage.remove(); 
+                moviesContainer.innerHTML = ''; 
 
 
                 for (const movieIdentifier of favoriteMovies) {
@@ -152,7 +152,7 @@
                         `;
                         moviesContainer.innerHTML += movieCard;
                     } else {
-                         // Film bulunamadı veya hata oluştu mesajını da buraya ekleyebiliriz
+                         
                         const errorCard = `
                             <div class="col">
                                 <div class="card h-100 movie-card-error">
