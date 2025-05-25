@@ -3,143 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehrim - Düzce</title>
-    <!-- Bootstrap CSS -->
+    <title>Şehrim - Kişisel Web Sitesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Özel CSS -->
-    <link rel="stylesheet" href="css/sehrim.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sehrim-style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Düzcemi Tanıyorum</a>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Beyza Üstünel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="sehrim.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş Yap</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Başlık -->
-    <header class="bg-light py-5 text-center">
-        <div class="container">
-            <h1 class="display-4 text-primary">Şehrim - DÜZCE</h1>
-            <p class="lead">Yeşilin, doğanın ve kültürün buluşma noktası</p>
-        </div>
+    <header class="container mt-5 text-center">
+        <h1>DÜZCE </h1>
+        <p class="lead"></p>
     </header>
 
-    <!-- Slider -->
-    <section class="container my-5">
-        <div id="duzceSlider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow">
-                <div class="carousel-item active">
-                    <img src="img/efteni.jpg" class="d-block w-100" alt="Düzce Manzarası">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                        <h5>Efteni Gölü</h5>
-                        <p>Doğal yaşam alanlarıyla ünlü, kuş cenneti olarak bilinen bölge.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/guzeldere.jpg" class="d-block w-100" alt="Aydınpınar Şelalesi">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                        <h5>Aydınpınar Şelalesi</h5>
-                        <p>Doğayla iç içe yürüyüş ve piknik alanları.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/müze.jpg" class="d-block w-100" alt="Akçakoca Sahili">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                        <h5>Akçakoca Sahili</h5>
-                        <p>Karadeniz kıyısında deniz, güneş ve huzur.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#duzceSlider" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#duzceSlider" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-    </section>
+    <main class="container mt-4">
 
-    <!-- Bilgilendirme Kartları -->
-    <section class="container my-5">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h4 class="card-title"><i class="fas fa-tree me-2"></i> Doğal Güzellikler</h4>
+        <section id="sehir-slider" class="mb-5">
+            <h2>UZAK VE YEŞİL BİR DİYAR</h2>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#yer1-detay">
+                            <img src="efteni.jpg" class="d-block w-100" alt="Şehir Resmi 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Efteni Gölü</h5>
+                                
+                            </div>
+                        </a>
                     </div>
-                    <div class="card-body">
-                        <p>Düzce; yaylaları, şelaleleri ve gölleri ile Karadeniz’in saklı cennetlerinden biridir.</p>
+                    <div class="carousel-item">
+                        <a href="#yer2-detay">
+                            <img src="guzeldere.jpg" class="d-block w-100" alt="Şehir Resmi 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Güzeldere Şelalesi</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#yer3-detay">
+                            <img src="fakillimagarasi.png" class="d-block w-100" alt="Şehir Resmi 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Fakıllı Mağarası</h5>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#yer4-detay">
+                            <img src="prusias1.jpg" class="d-block w-100" alt="Şehir Resmi 4">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Prusias ad Hypium Antik Kenti</h5>
+                            
+                            </div>
+                        </a>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-header bg-info text-white">
-                        <h4 class="card-title"><i class="fas fa-landmark me-2"></i> Tarih ve Kültür</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Konuralp Antik Kenti gibi tarihi miraslarıyla zengin bir geçmişe sahiptir.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-header bg-warning text-dark">
-                        <h4 class="card-title"><i class="fas fa-utensils me-2"></i> Yöresel Lezzetler</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Melen çorbası, fındık ezmesi ve daha fazlası ile Düzce mutfağı keşfedilmeye değer.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
+        <hr>
+
+        <section id="sehir-bilgileri" class="mt-5">
+            <h2>Genel Bilgiler</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Düzcemi Tanıyorum</h3>
-                    <p>Web Teknolojileri Dersi Projesi - 2024-2025 Bahar Dönemi</p>
+                    <h3>Nüfus ve Coğrafya</h3>
+                    <p><strong>Nüfus:</strong>412.344 </p>
+                    <p><strong>Yüzölçümü:</strong> 2492 km² </p>
+                    <p><strong>Bölge:</strong>Karadeniz Bölgesi</p>
+                    <p> Karadeniz Bölgesi'nin Batı Karadeniz Bölümü'nde yer alan ildir. 4 Şubat 2021 TÜİK verilerine göre merkez ilçeyle beraber 8 ilçe, 10 belediye, bu belediyelerde 115 mahalle, ayrıca 278 köy bulunmaktadır.Önemli oranda Karadeniz iklimi etkilidir. Bazı durumlarda batıdan komşu olduğu Marmara iklimi etkileri de hissedilir.Karadeniz ikliminin hakim olduğu ilde, kışın yaprağını döken ormanlar geniş alanlar kaplar. 242.340 hektar alana sahip ilin %51'ine denk gelen 122.712 hektarlık büyük çoğunluğu iyi korunmuş ormanlar yer alır. Ormanlarda başta Kayın olmak üzere, Gürgen, Kestane, Çınar, Meşe, Ihlamur, Yabani Fındık, Dişbudak, Titrekkavak, Beyaz Söğüt bulunur.  </p>
                 </div>
                 <div class="col-md-6">
-                    <h3>İletişim</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope me-2"></i> [e-posta adresiniz]</li>
-                        <li><i class="fas fa-phone me-2"></i> [telefon numaranız]</li>
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Düzce, Türkiye</li>
-                    </ul>
+                    <h3>Tarihçe</h3>
+                    <p>Düzce'nin tarihi, MÖ 1390-800 yılları arasında hüküm süren Hititler'e kadar uzanır. Antik Yunanistan zamanında Bithynia'nın en önemli şehirlerinden biri olmuştur. Bundan sonra Pontus fethedip Roma İmparatorluğu altında yaşamıştır. Roma zamanında Latin kültüründen ilham alınıp adı Prusias ad Hypium'a değiştirilmiştir. Osmanlı imparatorluğu Constantinapolis'i fethettikten sonra Orhan Gazi'nin komutanlarından Konuralp Bey'in Bizans Tekfurları ile 1323'te yaptığı savaşlar sonucu Osmanlı topraklarına katıldı. Osmanlı döneminde şehir merkezi terk edilmiş ve yerleşim yeri "gözetleme kulesi" anlamına gelen σκοπή (skopi) kelimesinden "Üskübü" olarak adlandırılmıştır. Osmanlı İmparatorluğu döneminde, Düzce askeri yardım sağladı ve İstanbul, Sivas ve Erzurum gibi daha doğudaki şehirler arasında önemli bir ulaşım merkezi haline geldi. Sultan Abdülaziz ve Abdülmecit döneminde Kafkaslar, Pontus kıyıları, Transkafkasya ve Balkanlar'dan gelen göçmenler Düzce'nin nüfusunu artırdı. Devlet onlara bedava arazi verdi. Abdülmecit döneminde 36088 nüfuslu 137 köyü ve 66618 hanesi vardı. 1869 yılına kadar Kastamonu Vilayeti Bolu Mutasarrıflığı, Göynük Kasabası'na bağlı bir bucak olarak tarihte yer almıştır. 1869 veya 1870 yılında Bolu Sancağı'na bağlı Kaza olmuştur. 1999 yılına kadar Bolu'ya bağlı bir ilçe olan Düzce 1999 Gölcük depremi ve 1999 Düzce depreminin ardından dönemin 57. Türkiye Hükûmeti tarafından TBMM'de alınan il statüsü verilme kararı ile ve 9. Türkiye cumhurbaşkanı Süleyman Demirel'in onayı ile il statüsü verilmiştir. </p>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 [Adınız Soyadınız] - Tüm Hakları Saklıdır</p>
+        </section>
+
+        <hr class="my-4">
+
+        <section id="gezilecek-yerler" class="mt-4">
+            <h2>Gezilecek Yerler ve Detaylar</h2>
+            
+            <article id="yer1-detay" class="place-detail card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="efteni3.png" class="img-fluid rounded-start" alt="Detay Resmi 1">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Efteni Gölü</h5>
+                            <p class="card-text">Efteni Gölü; Elmacık Dağı silsilesinin eteğinde Düzce Ovası’nın akarsu ağının birleştiği (Aksu, Asar, Uğur, Küçük Melen sularının ve yan dereler) ve Büyük Melen kanalıyla Karadeniz’e döküldüğü ekolojik bir ağın düğüm noktasındadır. Düzce’nin Gölyaka sınırları içinde bulunan Efteni Gölü, İlçe merkezine 5 kilometre, Düzce merkeze 25 kilometre mesafededir.Efteni Gölü ve çevresi sahip olduğu zengin bitki örtüsü ve su kaynakları ile göçmen kuşların göç yolu üzerinde bulunan önemli ve ender merkezlerden biridir. 1992 yılında Tarım ve Orman Bakanlığı Milli Parklar Av ve Yaban Hayatı Koruma Genel Müdürlüğü tarafından, av ve yaban hayvanlarının muhafazası, göçmen türlerinin göç yollarının güvence altına alınması, yaşama ortamlarının korunması, geliştirilmesi, iyileştirici tedbirlerin alınması, barınma, beslenme ve uygun yaşama koşullarının sağlanması amacı ile koruma statüsüne alınmış ve avlanma yasaklanmıştır.Koruma sahası içerisinde sazlık alanlar, açık su yüzeyleri bataklıklar ve çamur düzlükleri gibi farklı ekolojik nitelikteki habitatlar, başta su kuşları olmak üzere değişik türden zengin bir hayvan hayatının barınmasını sağlamaktadır. Efteni Gölü çevresindeki en önemli fauna elemanlarını su kuşları oluşturmaktadır. Bünyesinde 35 tanesi kalıcı olmak üzere toplam 150 çeşit kuşa ev sahipliği yapmaktadır. Leylekler, yaban ördekleri, tepeli beyaz balıkçıllar, angıt, sakarmeke ve kuğular gölün gediklilerinden olup kolay görünenler arasında yer almaktadırlar.
+
+Kuşların göç yolları üzerinde önemli bir konaklama ve beslenme sahası olan Efteni Gölü, özellikle kışları Avrupa’da yaşayan ancak güneye inemeyen bazı göçmen kuşların kışlama ve bazı kuş türlerinin  ise kuluçka alanıdır. Bu nedenle göç mevsiminde değişik türden çok sayıda kuş gözlenebilmektedir. Efteni Gölü koruma alanında bulunan diğer kuş türleri ise; nesli tükenme tehlikesi altında olan kuğu, turna, mezgeldek, toy, sibirya kazı, küçükkarabatak, bozördek, çıkrıkçın, kaşıkçın, potansiyel tehdit altında olanlar ise, yeşilbaş, fiyu, bekri, kılkuyruk, mazar, pasbaş, elmabaş’dır.
+
+Çevrede kuş türlerinin izlenebilmesi için 1 adet seyir terası bulunmaktadır. Kuşların göç yollarında, bir mola gölü olan Efteni Gölü, su seviyesinin dışında nilüfer çiçekleriyle, sazlık alanlarıyla kuşları saklarken fotoğraf ve kuş gözlemciliğine kompozisyon oluşturmaktadır.Efteni Gölü'nün oluşumuyla ilgili farklı efsaneler var.Bunlardan biri şu şekilde:Zamanın birinde Olympos tanrılarının en büyüğü Zeus ölümlülerin arasına inip onların durumlarını görmek istemiş. Hermes’i de alıp yeryüzüne inmiş ve bir evin kapısını çalmış. “Yolunu kaybetmiş iki garip âdemiz; kapıyı açar mısınız?” demiş. Ama kapı açılmak bir yana aralanmamış bile.  Zeus ve Hermes bu şekilde bin ev dolaşmış ama kimseden ilgi görememiş. İnsanlar ya kapıyı açmıyorlar ya da açsalar bile “Bizim kim olduğunu bilmediğimiz çulsuz dilencilerle işimiz olmaz.” diyerek kapıyı kapatıyorlarmış.
+
+Her yerden geri çevrilen Zeus ve Hermes sonunda harap bir kulübeye gelmiş. Bu kulübenin her yanı saz ve samanla kaplıymış. Çaldıkları kapıyı yaşlı bir kadın açmış. Karşısında iki zavallı yolcu; yorulmuş ve susamış... Yaşlı kadın kim olduklarını sormadan bu iki yolcuyu içeri buyur etmiş. İçeri girdiklerinde karşılarında güler yüzlü yaşlı bir adam görmüşler. Ev sahipleri ellerinde ne varsa misafirlerine ikram etmiş. Yaşlı kadın ve adam bu ziyaretten çok mutlu olmuş; ancak sofradaki yiyeceklerin hiç eksilmediğini, hep aynı miktarda kaldığını görmüş ve şaşırmış. Bunun üzerine Zeus; “Bizler ulu kişileriz. Sizin diğer komşularınız hak ettikleri cezaya çarptırılacaklar ama size hiç zarar gelmeyecek; bırakın evinizi bizimle birlikte dağın en tepesine gelin” demiş. Zor da olsa tepeye varınca yaşlı çift köylerinin sular altında kaldığını ve orada bir göl oluştuğunu görmüşler.  </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </article>
+
+            <article id="yer2-detay" class="place-detail card mb-3">
+                <div class="row g-0">
+                     <div class="col-md-4">
+                        <img src="guzeldere1.webp" class="img-fluid rounded-start" alt="Detay Resmi 2">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Güzeldere Şelalesi</h5>
+                            <p class="card-text">Güzeldere Şelalesi Tabiat Parkı, Düzce Gölyaka İlçesi sınırlarında olup, 22.76 ha alanı kapsamaktadır. Düzce’ye 18 km mesafede bulunan Şelale, Gölyaka ilçesine 11 km mesafede bulunan Güzeldere köyündedir ve rakımı 630 m’dir. 28.12.1993 tarihinde mesire alanı, 11.07.2011 yılında ise Tabiat Parkı olarak tescil edilmiştir.
+
+Güzeldere köyünden geçen Bıçkı Deresi üzerinde bulunan şelale, 120 m yükseklikten dökülen suyun doğal coşkusunu dev kayın ve gürgen ağaçlarıyla bütünleştirerek muazzam bir görüntü arz etmektedir. Elmacık Dağı (1.700 m)’na uzanan şelale ve çevresi orman yapısı ile dikkat çekmektedir. Şelalenin bulunduğu alanda, kayın, gürgen, köknar, porsuk, sarıçam, karaçam, kestane, ıhlamur, akçaağaç, dişbudak, ceviz, orman kavağı, orman söğüdü, orman gülü, karayemiş, papaz külahı ağaçları; böğürtlen, üvez, alıç, taflan, kantaron otu, kardelen, arap sümbülü, sıklamen, menekşe, düğün, eğrelti, fiğ, burçak vb. bitkiler görülmektedir.
+
+Güzeldere Şelalesi Tabiat Parkı, doğal peyzaj görüntüsü, piknik ve düzenlenmiş orman içi dinlenme alanları ve yürüyüş parkurları ile bölgenin önemli değerlerindendir. Bölge doğa yürüyüşü, kampçılık, bisiklet, foto-safari vb. aktiviteleri için oldukça uygundur. Alanda, konaklama ve yiyecek-içecek hizmetleri verilmektedir</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="yer3-detay" class="place-detail card mb-3">
+                 <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="fakilli1.webp" class="img-fluid rounded-start" alt="Detay Resmi 3">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Fakıllı Mağarası</h5>
+                            <p class="card-text">Fakıllı Mağarası, Düzce’nin Akçakoca ilçesinin 8 km güneydoğusundaki Fakıllı köyünde bulunmaktadır. Kültür ve Turizm Bakanlığı Kültür ve Tabiat Varlıklarını Koruma Bölge Kurulu Müdürlüğü tarafından I. derece sit alanı olarak tescillenmiştir. Bulunduğu köyden ismini alan mağaranın toplam uzunluğu 1.017 m ziyarete açık alanı ise 350 m’dir.
+
+Doğal özellikler taşıyan mağaranın içinde çeşitli yönlere giden galeriler, sarkıt ve dikitler vardır. Özellikle beyaz oda olarak anılan bölgeler damlataş bakımından zengindir. Mağaraya yağışlı dönemlerde düden girişler ile önemli oranda su girişi vardır. Çok dönemli gelişimi karakterize eden şekil ve yapılara sahip olan Fakıllı Mağarası yarı aktif bir mağaradır. Yüzeye yakın bir noktada bulunması nedeniyle yaz ve kış mevsimlerinde büyük farklılıklar gösteren nemli, sıcak ve serin bir havaya sahiptir. Mağaranın havasının astım ve nefes darlığı hastalığına iyi geldiği söylenmektedir. Mağaranın çevresi yapılan düzenlemeyle piknik alanı olarak kullanılmaktadır. </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="yer4-detay" class="place-detail card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="antik2.webp" class="img-fluid rounded-start" alt="Detay Resmi 4">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Prusias Ad Hypium Antik Kenti</h5>
+                            <p class="card-text">Konuralp kentinin de içinde bulunduğu bölge Herodot, Xenophon ve Strabon gibi antik çağ yazarlarına göre M.Ö. 1200-700 yılları arasında Trakyalı halkların yurdu olarak anılır. Klasik dönemde Megaralılar tarafından ‘’Kieros’’ ismi ile kurulduğu bilinmektedir. M.Ö. 183’te Bithynia Kralı I Prusias tarafından ele geçirilen kent Melen (Hypium) çayının üstündeki Prusias anlamına gelen ’’Prusias ad Hypium’’ adını alır. Bölge M.Ö. 74 yılında Bithynia Kralı IV. Nikomedes’in döneminde Roma yönetimine geçer. M.S. I. yüzyılda gelişmeye başlayan kent, M.S. II. ve III. yüzyıllar arası sosyal refahta doruğa çıkmıştır.
+
+Antik kentte ele geçen ithaf yazıtlarında, Prusias Ad Hypium Kenti’nin su kemerleri, agora, boule, tiyatro, hamam gibi diğer birçok önemli anıtsal yapılarının birçoğunun bu dönemlerde inşa edildiği bilinmektedir. Ortaçağda da kent hakkında yazıtlar ve dini toplantı kayıtlarında zengin bilgi elde edilmektedir. Erken Hristiyanlık dönemi ve sonrasında da kent canlılığını devam ettirmiştir. Prusias ad Hypium, Orhan Gazi’nin komutanlarından olan Konur Alp Bey tarafından 1323 yılında ele geçirilerek Osmanlı topraklarına katılmıştır.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-5 mb-3">
+        <p>&copy; 2025 Beyza Üstünel | Web Teknolojileri Projesi</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Özel JS -->
-    <script src="js/script.js"></script>
 </body>
 </html>
