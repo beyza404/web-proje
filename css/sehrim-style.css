@@ -1,51 +1,53 @@
-/* sehrim-style.css */
+body {
+      background-color: #fdfaf6;  
+}
 
 #sehir-slider .carousel-item img {
-    max-height: 500px; /* Slider resimlerinin maksimum yüksekliği, isteğe bağlı */
-    object-fit: cover; /* Resimlerin orantısını koruyarak alanı kaplamasını sağlar */
-    border-radius: 8px; /* Slider resimlerine hafif yuvarlak köşe */
+    max-height: 500px; 
+    object-fit: cover; 
+    border-radius: 8px; 
 }
 
 #sehir-slider .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Caption'a hafif koyu bir arka plan */
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 5px;
     padding: 10px;
 }
 
 #sehir-slider .carousel-caption h5 {
-    color: #fff; /* Başlık rengi beyaz */
+    color: #fff; 
 }
 
 #sehir-slider .carousel-caption p {
-    color: #f0f0f0; /* Paragraf rengi açık gri */
+    color: #f0f0f0; 
 }
 
 #sehir-bilgileri h3 {
-    color: #A0522D; /* Koyu Sienna - Alt başlıklar için (ana stilden gelebilir) */
+    color: #A0522D; 
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .place-detail.card {
-    background-color: #faf0e6; /* Çok açık bej, kartlar için */
-    border: 1px solid #D2B48C; /* Açık Kahve Kenarlık */
+    background-color: #faf0e6; 
+    border: 1px solid #D2B48C; 
 }
 
 .place-detail.card .card-title {
-    color: #8B4513; /* Orta Kahve */
+    color: #8B4513; 
 }
 
 .place-detail.card img {
-    border-radius: .25rem 0 0 .25rem; /* Sadece sol köşeler yuvarlak, kart yapısına uygun */
+    border-radius: .25rem 0 0 .25rem; 
 }
 
-/* Header'daki şehir adı ve lead paragrafı için ek stil (isteğe bağlı) */
+
 header.container h1 {
-    /* font-size: 3rem; */ /* Ana stildeki h1'den miras alır, isterseniz büyütebilirsiniz */
-    color: #8B4513; /* Ana stilden miras alır */
+    
+    color: #8B4513; 
 }
 
 header.container .lead {
     font-style: italic;
-    color: #5a4b41; /* Ana stilden miras alır */
+    color: #5a4b41; 
 }
