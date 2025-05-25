@@ -1,45 +1,87 @@
-/* mirasimiz-style.css */
 body {
-      background-color:#fdfaf6;  /* Ana style.css'den miras alır, gerekirse burada özelleştirin */
+      background-color:#f5f5dc;  
 }
 
 .heritage-item header h1,
 .heritage-item header .lead {
     color: #a0512da8;
-    /* Ana stilden miras alır, gerekirse özelleştirilebilir */
+    
 }
 
 .heritage-image-container img {
-    border: 3px solid #D2B48C; /* Açık Kahve Kenarlık */
+    border: 3px solid #D2B48C; 
     padding: 5px;
-    background-color: #fff; /* Resim arkasına beyaz fon */
+    background-color: #fff; 
 }
 
 .heritage-item section h2 {
-    color: #8B4513; /* Orta Kahve (Ana stilden miras alır) */
-    border-bottom: 2px solid #D2B48C; /* Açık Kahve Alt Çizgi */
+    color: #8B4513; 
+    border-bottom: 2px solid #D2B48C; 
     padding-bottom: 8px;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
 .heritage-item #ozellikler img {
-    border: 1px solid #e0e0e0; /* Hafif gri kenarlık */
+    border: 1px solid #e0e0e0; 
 }
 
 .heritage-item aside {
-    background-color: #fdf5e6 !important; /* Daha açık bir bej tonu, ana stildeki aside'ı ezmek için !important gerekebilir */
-    border-left: 5px solid #A0522D; /* Koyu Sienna sol kenarlık */
+    background-color: #fdf5e6 !important; 
+    border-left: 5px solid #A0522D; 
 }
 
 .heritage-item aside h4 {
-    color: #A0522D; /* Koyu Sienna */
+    color: #A0522D; 
 }
-
 .heritage-item aside ul li a {
-    color: #8B4513; /* Orta Kahve */
+    color: #8B4513; 
 }
 
 .heritage-item aside ul li a:hover {
-    color: #4a3b31; /* Koyu Kahve */
+    color: #4a3b31; 
+} */
+body {
+      background-color:#fdfaf6;  
+}
+
+.heritage-item header h1,
+.heritage-item header .lead {
+    color: #a0512da8;
+    
+}
+
+.heritage-image-container img {
+    border: 3px solid #D2B48C; 
+    padding: 5px;
+    background-color: #fff; 
+}
+
+.heritage-item section h2 {
+    color: #8B4513;
+    border-bottom: 2px solid #D2B48C; 
+    padding-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.heritage-item #ozellikler img {
+    border: 1px solid #e0e0e0; 
+}
+
+.heritage-item aside {
+    background-color: #fdf5e6 !important; 
+    border-left: 5px solid #A0522D; 
+}
+
+.heritage-item aside h4 {
+    color: #A0522D; 
+}
+
+.heritage-item aside ul li a {
+    color: #8B4513; 
+}
+
+.heritage-item aside ul li a:hover {
+    color: #4a3b31; 
 }
